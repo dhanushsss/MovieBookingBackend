@@ -31,16 +31,14 @@ public class BookingController {
         return bookingService.getBookingsByBookingidtotal(theatreid);
     }
 
-    @GetMapping("movieTotal/{movieid}")
-    public int getMovieByIdTotal(@PathVariable int movieid){
-        return bookingService.getMovieByIdTotal(movieid);
-    }
 
-
-//    @GetMapping("overview/{Bookingid}")
-//    public Bookings getMovieOverview(@PathVariable int Bookingid){
-//        return bookingService.totalNoOfticketsId(Bookingid);
+//    @GetMapping("movieTotal/{movieid}")
+//    public int getMovieByIdTotal(@PathVariable int movieid){
+//        return bookingService.getMovieByIdTotal(movieid);
 //    }
+
+
+
 
 
 }

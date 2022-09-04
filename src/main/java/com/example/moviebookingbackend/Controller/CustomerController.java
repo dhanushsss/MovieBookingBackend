@@ -1,11 +1,13 @@
 package com.example.moviebookingbackend.Controller;
 
 
+import com.example.moviebookingbackend.Model.Bookings;
 import com.example.moviebookingbackend.Model.Customer;
 import com.example.moviebookingbackend.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 
 @RestController
@@ -50,6 +52,12 @@ public class CustomerController {
     @GetMapping("/getUserByid/{id}")
     public Customer getUserByid(@PathVariable int id){
         return service.getUser(id);
+    }
+
+
+    @GetMapping("getByCustomerId/{customerid}")
+    public List<Bookings> getCustomer(@PathVariable int customerid){
+        return service.findCustomer(customerid);
     }
 
 

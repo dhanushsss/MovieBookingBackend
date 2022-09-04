@@ -18,21 +18,15 @@ public class TheatreController {
     @Autowired
     private TheatreRepo repository ;
 
+
+    // theatre register
+
     @PostMapping("/theatre")
     public Theatre saveData(@RequestBody  Theatre theatre){
         return service.saveData(theatre);
     }
 
-    @GetMapping("/findAll")
-    public List<Theatre> getData(){
-        return repository.findAll();
-    }
-
-    @GetMapping("TheatreBy/{id}")
-    public Theatre findMoviesById(@PathVariable int id) {
-        return service.getMovieById(id);
-    }
-
+    //theatre login
     @PostMapping("/TheatreLogin")
     public int loginUser(@RequestBody Theatre theatre) throws Exception {
         String tempEmailId = theatre.getTheatreEmail();
@@ -45,6 +39,20 @@ public class TheatreController {
             throw new Exception("Bad credentials");
         }
         return userObj.getTheatreid();
+    }
+
+
+    // display movie data
+    @GetMapping("/findAll")
+    public List<Theatre> getData(){
+        return repository.findAll();
+    }
+
+
+    //mapping find movie based on id
+    @GetMapping("TheatreBy/{id}")
+    public Theatre findMoviesById(@PathVariable int id) {
+        return service.getMovieById(id);
     }
 
 }

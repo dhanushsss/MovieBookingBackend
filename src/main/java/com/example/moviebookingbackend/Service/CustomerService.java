@@ -1,9 +1,12 @@
 package com.example.moviebookingbackend.Service;
 
+import com.example.moviebookingbackend.Model.Bookings;
 import com.example.moviebookingbackend.Model.Customer;
 import com.example.moviebookingbackend.Repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CustomerService {
@@ -28,5 +31,9 @@ public class CustomerService {
 
     public Customer getUser(int id){
         return repository.findById(id);
+    }
+
+    public List<Bookings> findCustomer (int customerid){
+        return repository.findCustomer(customerid);
     }
 }
