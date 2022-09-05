@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -18,7 +19,7 @@ public class Movies {
     private int movieid;
     private String title;
     private String cast;
-    private String date;
+    private LocalDate date;
     private String language;
     private int price;
     private String showTime;
