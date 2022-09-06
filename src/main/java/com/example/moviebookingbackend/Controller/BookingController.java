@@ -31,7 +31,6 @@ public class BookingController {
         return bookingService.getBookingsByBookingidtotal(theatreid);
     }
 
-
 //    @GetMapping("movieTotal/{movieid}")
 //    public int getMovieByIdTotal(@PathVariable int movieid){
 //        return bookingService.getMovieByIdTotal(movieid);
