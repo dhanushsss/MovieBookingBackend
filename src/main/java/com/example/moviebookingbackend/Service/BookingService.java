@@ -24,12 +24,5 @@ public class BookingService {
         return repository.getBookingsByBookingidtotal(theatreid);
     }
 
-//
-//    public  int getMovieByIdTotal(int movieid){
-//        return repository.getMovieByIdTotal(movieid);
-//    }
-
-
-
 
 }

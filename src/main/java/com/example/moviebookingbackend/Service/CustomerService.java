@@ -36,4 +36,6 @@ public class CustomerService {
     public List<Bookings> findCustomer (int customerid){
         return repository.findCustomer(customerid);
     }
+
+
 }
